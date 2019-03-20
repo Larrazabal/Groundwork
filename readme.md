@@ -1,6 +1,8 @@
 # Groundwork Management App
 
-Groundwork currently does:
+To-do:
 
-- 
+- Make functional
+- Add tasks
+- Add timer
 
