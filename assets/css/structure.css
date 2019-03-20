@@ -1,0 +1,52 @@
+#workspaces .workspace-header {
+	margin-bottom: 2em;
+}
+#workspaces h2 {
+	font-size: 2em;
+	font-weight: 700;
+}
+#workspaces h2 input {
+	display: block;
+	width: 100%;
+	background: inherit;
+	color: inherit;
+}
+.workspace {
+	border-bottom: 1px dashed #afafaf;
+	padding: 3em;
+}
+
+.workspace-items .item {
+	width: 20em;
+}
+.workspace-items .item a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 1em;
+	background: #f5f5f5;
+	border-radius: .5em;
+	box-shadow: .25em .25em 0 #e5e5e5;
+}
+.item-header {
+}
+.item-header img {
+	width: 1.5em;
+	height: 1.5em;
+	float: left;
+}
+.item-header h3 {
+	font-size: 1.25em;
+	font-weight: 700;
+	float: left;
+	padding-left: .5em;
+	padding-top: .1em;
+	width: calc(100% - 1.5em);
+	overflow: hidden;
+}
+.item p {
+	line-height: 1.5;
+	margin-top: 1em;
+	text-overflow: ellipsis;
+	height: 5.5em;
+}

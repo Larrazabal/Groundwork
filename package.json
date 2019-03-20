@@ -1,0 +1,14 @@
+{
+  "name": "groundwork",
+  "version": "1.0.0",
+  "description": "A simple work organizer and task handler",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Enrique de Larrazabal",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^4.1.0"
+  }
+}

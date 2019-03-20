@@ -1,0 +1,10 @@
+::selection {
+	background: #2d2d2d;
+	color: #fff;
+	text-shadow: none;
+}
+body {
+	background: #fff;
+	font-family: "Montserrat", Sans-Serif;
+	color: #2d2d2d;
+}
