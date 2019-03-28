@@ -8,3 +8,26 @@ body {
 	font-family: "Montserrat", Sans-Serif;
 	color: #2d2d2d;
 }
+
+/*
+==================
+Scrollbar Settings
+==================
+*/
+
+/* width */
+::-webkit-scrollbar {
+	width: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	background: #efefef;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #9f9f9f;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #7f7f7f;
+}

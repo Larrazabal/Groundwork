@@ -3,15 +3,17 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 36 24" style="enable-background:new 0 0 36 24;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FF0066;}
+	.st0{fill:#FFDDFF;}
+	.st1{fill:#FF0066;}
 </style>
 <g>
-	<path class="st0" d="M24,2c5.51,0,10,4.49,10,10c0,5.51-4.49,10-10,10H12C6.49,22,2,17.51,2,12C2,6.49,6.49,2,12,2H24 M24,0H12
+	<path class="st0" d="M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1h12c6.1,0,11,4.9,11,11s-4.9,11-11,11H12z"/>
+	<path class="st1" d="M24,2c5.5,0,10,4.5,10,10c0,5.5-4.5,10-10,10H12C6.5,22,2,17.5,2,12C2,6.5,6.5,2,12,2H24 M24,0H12
 		C5.4,0,0,5.4,0,12v0c0,6.6,5.4,12,12,12h12c6.6,0,12-5.4,12-12v0C36,5.4,30.6,0,24,0L24,0z"/>
 </g>
 <g id="XMLID_1_">
 	<g>
-		<polygon class="st0" points="24,14.29 22.59,15.7 18.01,11.13 13.42,15.7 12,14.29 18.01,8.3 		"/>
+		<polygon class="st1" points="24,14.3 22.6,15.7 18,11.1 13.4,15.7 12,14.3 18,8.3 		"/>
 	</g>
 </g>
 </svg>

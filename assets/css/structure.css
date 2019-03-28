@@ -1,14 +1,37 @@
+.preloader {
+	height: 0;
+	overflow: hidden;
+	speak: none;
+}
+
+#notify {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #f06;
+	color: #fff;
+	z-index: 9999;
+	text-align: center;
+	padding: 1em;
+	display: none;
+	box-shadow: 0 0 1em #7f7f7f;
+}
+#notify strong {
+	font-weight: 700;
+}
 
 .workspace {
-	border-bottom: 1px dashed #e5e5e5;
+	border-bottom: 1px dashed #c5c5c5; /* Same as h2 border */
 	padding: 0 3em .95em; /* Bottom padding is related to .item margin-bottom */
+	transition: .1s linear all;
 }
 .workspace-header {
 	margin-bottom: 1.75em;
+	transition: .1s linear all;
 }
 .workspace-header .workspace-options {
 	margin-top: .9em;
-	margin-left: .5em;
 	float: left;
 	display: block;
 	opacity: 0;
@@ -16,26 +39,42 @@
 }
 .workspace-header .workspace-options a {
 	display: block;
-	width: 2.25em;
-	height: 2.25em;
+	width: 1.75em;
+	height: 1.75em;
 	float: left;
 	margin-left: 1em;
 }
-.workspace-header .workspace-options .collapser-toggle {
-	width: 3.375em;
+.workspace-header .workspace-options .workspace-settings {
+	background-image: url(../img/system_icons/01-settings.svg);
+}
+.workspace-header .workspace-options .workspace-toggle {
+	width: 2.625em;
+	background-image: url(../img/system_icons/02.1-arrow_up.svg);
+}
+.workspace-header .workspace-options .workspace-arrange-drag-drop {
+	background-image: url(../img/system_icons/03-arrange_up_down.svg);
+}
+.workspace-header .workspace-options .workspace-settings:hover {
+	background-image: url(../img/system_icons/01-settings-hover.svg);
+}
+.workspace-header .workspace-options .workspace-toggle:hover {
+	background-image: url(../img/system_icons/02.1-arrow_up-hover.svg);
+}
+.workspace-header .workspace-options .workspace-arrange-drag-drop:hover {
+	background-image: url(../img/system_icons/03-arrange_up_down-hover.svg);
 }
 .workspace-header .workspace-options a img {
 	display: block;
 	width: 100%;
 	height: 100%;
 }
-.workspace:hover .workspace-header .workspace-options {
+.workspace-header:hover .workspace-options {
 	opacity: 1;
 }
 #workspaces h2 {
-	font-size: 2em;
+	font-size: 1.75em;
 	font-weight: 700;
-	border: 1px dashed #e0e0e0;
+	border: 1px dashed #c5c5c5; /* Same as workspace border */
 	border-top: none;
 	padding: .5em 1em;
 	border-radius: 0 0 8px 8px;
@@ -45,15 +84,19 @@
 	text-overflow: ellipsis;
 	position: relative;
 	max-width: 600px;
+	transition: .1s linear all;
 }
 
+.workspace-items {
+	transition: .1s linear all;
+}
 .workspace-items .item {
 	width: 20em;
 	margin-right: 1em;
 	margin-bottom: 1em;
 	float: left;
 	position: relative;
-	font-size: .8em; /* Workspace item size modifier */
+	font-size: .75em; /* Workspace item size modifier */
 }
 .item-anchor {
 	display: block;
@@ -80,8 +123,9 @@
 	right: 0;
 	width: 2.5em;
 	height: 2.5em;
-	border: 3px solid #e5e5e5;
-	background: #e5e5e5; /* Same as border on .item-ancor:hover; */
+	border: .45em solid #e5e5e5;
+	background-image: url(../img/system_icons/01-settings.svg);
+	background-color: #e5e5e5; /* Same as border on .item-ancor:hover; */
 	padding: .25em;
 	border-radius: 8px 0 8px 0;
 	display: block;
@@ -89,8 +133,8 @@
 	transition: .1s linear all;
 }
 .item-settings-button:hover {
-	background: #bfbfbf;
-	border-color: #bfbfbf;
+	background-color: #cfcfcf;
+	border-color: #cfcfcf;
 }
 .item-settings-button img {
 	width: 100%;
@@ -140,13 +184,91 @@
 	margin-bottom: 0;
 }
 .workspace.toggle-off .workspace-items {
-	display: none;
+	height: 0;
+	overflow: hidden;
+}
+.workspace.toggle-off .workspace-header .workspace-options .workspace-toggle {
+	background-image: url(../img/system_icons/02.2-arrow_down.svg);
+}
+.workspace.toggle-off .workspace-header .workspace-options .workspace-toggle:hover {
+	background-image: url(../img/system_icons/02.2-arrow_down-hover.svg);
 }
 #workspaces .workspace.toggle-off h2 {
-	font-size: 2em;
-	font-weight: 700;
-	border: 1px dashed #e0e0e0;
 	border-top: none;
 	border-bottom: none;
 	border-radius: 0;
+}
+
+/* Workspace Settings */
+.edit-workspace-settings {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	top: 0;
+	left: 0;
+	z-index: 9997;
+}
+.edit-workspace-settings .console {
+	z-index: 9998;
+	position: relative;
+	padding: 1em;
+	margin: 10% auto 0;
+	border-radius: 8px;
+	width: 23em;
+	background: #fafafa;
+	border: 3px solid #f0f0f0;
+}
+.edit-workspace-settings h3 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.25em;
+}
+.edit-workspace-settings input[type='text'] {
+	margin-top: 1em;
+	display: block;
+	width: 100%;
+	border: 1px solid #7f7f7f;
+	border-radius: 8px;
+	padding: .5em 1em;
+}
+.edit-workspace-settings .cancel,
+.edit-workspace-settings .done {
+	padding: 1em;
+	display: block;
+	margin: 1em 1.5em 0;
+	width: calc(50% - 3em);
+	text-align: center;
+	border-radius: 2em;
+	float: left;
+}
+.edit-workspace-settings .cancel {
+	border: 3px solid #f06;
+	color: #f06;
+}
+.edit-workspace-settings .done {
+	background: #f06;
+	color: #fff;
+}
+.edit-workspace-settings .done:hover {
+	background: #e06;
+}
+.edit-workspace-settings .cancel:hover {
+	background: #fdf;
+}
+.edit-workspace-settings .remove-workspace-options {
+	margin: 2em 0 0;
+	text-align: center;
+	display: block;
+}
+.edit-workspace-settings .remove-workspace-options a:hover {
+	text-decoration: underline;
+}
+.delete-transition {
+	display: none;
+}
+.delete-yes,
+.delete-no {
+	color: #f06;
 }

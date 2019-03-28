@@ -9,19 +9,43 @@
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 	</head>
 	<body>
+		<div class="preloader">
+			<img src="assets/img/system_icons/01-settings.svg" alt="">
+			<img src="assets/img/system_icons/01-settings-hover.svg" alt="">
+			<img src="assets/img/system_icons/02.1-arrow_up.svg" alt="">
+			<img src="assets/img/system_icons/02.1-arrow_up-hover.svg" alt="">
+			<img src="assets/img/system_icons/02.2-arrow_down.svg" alt="">
+			<img src="assets/img/system_icons/02.2-arrow_down-hover.svg" alt="">
+			<img src="assets/img/system_icons/03-arrange_up_down.svg" alt="">
+			<img src="assets/img/system_icons/03-arrange_up_down-hover.svg" alt="">
+		</div>
+		<div id="notify"></div>
 		<div id="notes">
 			
 		</div>
 		<div id="workspaces">
-			<div class="workspace toggle-on">
+			<div class="edit-workspace-settings">
+				<div class="console">
+					<h3>Change Workspace Name</h3>
+					<input type="text">
+					<div class="change-options">
+						<a href="#" class="cancel">Cancel</a>
+						<a href="#" class="done">Done</a>
+						<div class="clearfix"></div>
+					</div>
+					<div class="remove-workspace-options">
+						<a href="#" class="delete-1">Delete This Workspace</a>
+						<p class="delete-transition">Are you sure? <a href="#" class="delete-yes">Yes</a> or <a href="#" class="delete-no">No</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="workspace toggle-off">
 				<header class="workspace-header">
-					<h2>
-						<span>Usual Shit</span>
-					</h2>
+					<h2>Thesis Stuff</h2>
 					<nav class="workspace-options">
-						<a href="#" class="workspace-settings"><img src="assets/img/system_icons/01-settings.svg" alt=""></a>
-						<a href="#" class="workspace-arrange-drag-drop"><img src="assets/img/system_icons/03-arrange_up_down.svg" alt=""></a>
-						<a href="#" class="collapser-toggle"><img src="assets/img/system_icons/02-arrow_up.svg" alt=""></a>
+						<a href="#" class="workspace-settings"></a>
+						<a href="#" class="workspace-arrange-drag-drop"></a>
+						<a href="#" class="workspace-toggle"></a>
 					</nav>
 					<div class="clearfix"></div>
 				</header>
@@ -36,7 +60,7 @@
 							</header>
 							<p>GitHub is a web-based hosting service for version control using Git. It is mostly used for computer code. It offers all of the distributed version control and source code management functionality of Git as well as adding its own features.</p>
 						</a>
-						<a href="#" class="item-settings-button"><img src="assets/img/system_icons/01-settings.svg" alt=""></a>
+						<a href="#" class="item-settings-button"></a>
 					</article>
 					<article class="item">
 						<a href="#" class="item-anchor">
@@ -48,10 +72,10 @@
 							</header>
 							<p>Facebook, Inc. is an American online social media and social networking service company. It is based in Menlo Park, California. It was founded by Mark Zuckerberg, along with fellow Harvard College students and roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes.</p>
 						</a>
-						<a href="#" class="item-settings-button"><img src="assets/img/system_icons/01-settings.svg" alt=""></a>
+						<a href="#" class="item-settings-button"></a>
 					</article>
 					<article class="item">
-						<a href="C:\Users\Enrique\Dropbox" class="item-anchor">
+						<a href="#" class="item-anchor">
 							<header class="item-header">
 								<img src="assets/img/folder.png" alt="">
 								<h3>Dropbox File Location</h3>
@@ -60,7 +84,7 @@
 							</header>
 							<p>Dropbox file location on this PC.</p>
 						</a>
-						<a href="#" class="item-settings-button"><img src="assets/img/system_icons/01-settings.svg" alt=""></a>
+						<a href="#" class="item-settings-button"></a>
 					</article>
 					<article class="item">
 						<a href="#" class="item-anchor">
@@ -72,7 +96,133 @@
 							</header>
 							<p>Groundwork project folder location on this PC.</p>
 						</a>
-						<a href="#" class="item-settings-button"><img src="assets/img/system_icons/01-settings.svg" alt=""></a>
+						<a href="#" class="item-settings-button"></a>
+					</article>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+
+			<div class="workspace toggle-off">
+				<header class="workspace-header">
+					<h2>Market Research</h2>
+					<nav class="workspace-options">
+						<a href="#" class="workspace-settings"></a>
+						<a href="#" class="workspace-arrange-drag-drop"></a>
+						<a href="#" class="workspace-toggle"></a>
+					</nav>
+					<div class="clearfix"></div>
+				</header>
+				<div class="workspace-items">
+					<article class="item">
+						<a href="#" class="item-anchor">
+							<header class="item-header">
+								<img src="https://github.com/favicon.ico" alt="">
+								<h3>GitHub</h3>
+								<div class="clearfix"></div>
+								<span href="#" class="item-link">https://github.com/</span>
+							</header>
+							<p>GitHub is a web-based hosting service for version control using Git. It is mostly used for computer code. It offers all of the distributed version control and source code management functionality of Git as well as adding its own features.</p>
+						</a>
+						<a href="#" class="item-settings-button"></a>
+					</article>
+					<article class="item">
+						<a href="#" class="item-anchor">
+							<header class="item-header">
+								<img src="https://www.facebook.com/favicon.ico" alt="">
+								<h3>Facebook</h3>
+								<div class="clearfix"></div>
+								<span href="#" class="item-link">https://facebook.com/</span>
+							</header>
+							<p>Facebook, Inc. is an American online social media and social networking service company. It is based in Menlo Park, California. It was founded by Mark Zuckerberg, along with fellow Harvard College students and roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes.</p>
+						</a>
+						<a href="#" class="item-settings-button"></a>
+					</article>
+					<article class="item">
+						<a href="#" class="item-anchor">
+							<header class="item-header">
+								<img src="assets/img/folder.png" alt="">
+								<h3>Dropbox File Location</h3>
+								<div class="clearfix"></div>
+								<span href="#" class="item-link">C:\Users\Enrique\Dropbox</span>
+							</header>
+							<p>Dropbox file location on this PC.</p>
+						</a>
+						<a href="#" class="item-settings-button"></a>
+					</article>
+					<article class="item">
+						<a href="#" class="item-anchor">
+							<header class="item-header">
+								<img src="assets/img/folder.png" alt="">
+								<h3>Groundwork File Location</h3>
+								<div class="clearfix"></div>
+								<span href="#" class="item-link">C:\Users\Enrique\Documents\GitHub\Groundwork</span>
+							</header>
+							<p>Groundwork project folder location on this PC.</p>
+						</a>
+						<a href="#" class="item-settings-button"></a>
+					</article>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+
+			<div class="workspace">
+				<header class="workspace-header">
+					<h2>Usual Things</h2>
+					<nav class="workspace-options">
+						<a href="#" class="workspace-settings"></a>
+						<a href="#" class="workspace-arrange-drag-drop"></a>
+						<a href="#" class="workspace-toggle"></a>
+					</nav>
+					<div class="clearfix"></div>
+				</header>
+				<div class="workspace-items">
+					<article class="item">
+						<a href="#" class="item-anchor">
+							<header class="item-header">
+								<img src="https://github.com/favicon.ico" alt="">
+								<h3>GitHub</h3>
+								<div class="clearfix"></div>
+								<span href="#" class="item-link">https://github.com/</span>
+							</header>
+							<p>GitHub is a web-based hosting service for version control using Git. It is mostly used for computer code. It offers all of the distributed version control and source code management functionality of Git as well as adding its own features.</p>
+						</a>
+						<a href="#" class="item-settings-button"></a>
+					</article>
+					<article class="item">
+						<a href="#" class="item-anchor">
+							<header class="item-header">
+								<img src="https://www.facebook.com/favicon.ico" alt="">
+								<h3>Facebook</h3>
+								<div class="clearfix"></div>
+								<span href="#" class="item-link">https://facebook.com/</span>
+							</header>
+							<p>Facebook, Inc. is an American online social media and social networking service company. It is based in Menlo Park, California. It was founded by Mark Zuckerberg, along with fellow Harvard College students and roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes.</p>
+						</a>
+						<a href="#" class="item-settings-button"></a>
+					</article>
+					<article class="item">
+						<a href="#" class="item-anchor">
+							<header class="item-header">
+								<img src="assets/img/folder.png" alt="">
+								<h3>Dropbox File Location</h3>
+								<div class="clearfix"></div>
+								<span href="#" class="item-link">C:\Users\Enrique\Dropbox</span>
+							</header>
+							<p>Dropbox file location on this PC.</p>
+						</a>
+						<a href="#" class="item-settings-button"></a>
+					</article>
+					<article class="item">
+						<a href="#" class="item-anchor">
+							<header class="item-header">
+								<img src="assets/img/folder.png" alt="">
+								<h3>Groundwork File Location</h3>
+								<div class="clearfix"></div>
+								<span href="#" class="item-link">C:\Users\Enrique\Documents\GitHub\Groundwork</span>
+							</header>
+							<p>Groundwork project folder location on this PC.</p>
+						</a>
+						<a href="#" class="item-settings-button"></a>
 					</article>
 					<div class="clearfix"></div>
 				</div>
@@ -82,8 +232,7 @@
 			</div>
 		</div>
 
-
-		<script src="assets/js/jquery-3.3.1.min.js"></script>
+		<script>window.$ = window.jQuery = require("./assets/js/jquery-3.3.1.min.js");</script>
 		<script src="assets/js/app.js"></script>
 		<script>
 			require("renderer.js");
