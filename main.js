@@ -57,10 +57,70 @@ const mainMenuTemplate = [
 				accelerator: process.platform == "darwin" ? "Command+S" : "Ctrl+S"
 			},
 			{
+				type: "separator"
+			},
+			{
 				label: "Exit",
-				accelerator: process.platform == "darwin" ? "Command+Q" : "Ctrl+Q",
+				accelerator: process.platform == "darwin" ? "Command+W" : "Ctrl+W",
 				click() {
 					app.quit();
+				}
+			}
+		]
+	},
+	{
+		label: "Edit",
+		submenu: [
+			{
+				label: "Cut",
+				accelerator: process.platform == "darwin" ? "Command+X" : "Ctrl+X"
+			},
+			{
+				label: "Copy",
+				accelerator: process.platform == "darwin" ? "Command+C" : "Ctrl+C"
+			},
+			{
+				label: "Paste",
+				accelerator: process.platform == "darwin" ? "Command+V" : "Ctrl+V"
+			}
+		]
+	},
+	{
+		label: "View",
+		submenu: [
+			{
+				label: "Toggle Tasks",
+				accelerator: process.platform == "darwin" ? "Command+1" : "Ctrl+1",
+			},
+			{
+				label: "Toggle To Do",
+				accelerator: process.platform == "darwin" ? "Command+2" : "Ctrl+2",
+			},
+			{
+				label: "Toggle Notes",
+				accelerator: process.platform == "darwin" ? "Command+3" : "Ctrl+3",
+			},
+			{
+				label: "Toggle Done",
+				accelerator: process.platform == "darwin" ? "Command+4" : "Ctrl+4",
+			}
+		]
+	},
+	{
+		label: "Developer",
+		submenu: [
+			{
+				label: "Open Console",
+				accelerator: process.platform == "darwin" ? "F12" : "F12",
+				click() {
+					mainWindow.webContents.openDevTools();
+				}
+			},
+			{
+				label: "Reload",
+				accelerator: process.platform == "darwin" ? "Command+R" : "Ctrl+R",
+				click() {
+					mainWindow.reload();
 				}
 			}
 		]

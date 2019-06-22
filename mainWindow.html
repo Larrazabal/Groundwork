@@ -2,13 +2,55 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Groundwork Tasks</title>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<title>Project Name - Groundwork</title>
 		<link rel="stylesheet" href="assets/css/reset.css">
 		<link rel="stylesheet" href="assets/css/structure.css">
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 	</head>
 	<body>
+		<header class="main-header">
+			<h1>Project Name</h1>
+		</header>
+
+		<div class="all-cont">
+			<div class="barrier"></div>
+			<div class="cont cont-todo-macro">
+				<header class="cont-header">
+					<h2><label for="input-macro">🏃 Tasks 🙋</label></h2>
+				</header>
+				<div class="input-holder">
+					<textarea class="text-input" name="input-macro" id="input-macro"></textarea>
+				</div>
+			</div>
+			<div class="barrier"></div>
+			<div class="cont cont-todo-micro">
+					<h2><label for="input-micro">👷 To Do 💪</label></h2>
+				</header>
+				<div class="input-holder">
+					<textarea class="text-input" name="input-macro" id="input-micro"></textarea>
+				</div>
+			</div>
+			<div class="barrier"></div>
+			<div class="cont cont-notes">
+				<header class="cont-header">
+					<h2><label for="input-notes">📚 Notes 📝</label></h2>
+				</header>
+				<div class="input-holder">
+					<textarea class="text-input" name="input-notes" id="input-notes"></textarea>
+				</div>
+			</div>
+			<div class="barrier"></div>
+			<div class="cont cont-done">
+				<header class="cont-header">
+					<h2><label for="input-done">😍 Done 🏁</label></h2>
+				</header>
+				<div class="input-holder">
+					<textarea class="text-input" name="input-done" id="input-done"></textarea>
+				</div>
+			</div>
+			<div class="barrier"></div>
+			<div class="clearfix"></div>
+		</div>
 
 		<script>window.$ = window.jQuery = require("./assets/js/jquery-3.3.1.min.js");</script>
 		<script src="assets/js/app.js"></script>

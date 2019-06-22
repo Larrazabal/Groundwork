@@ -1,0 +1,53 @@
+
+.main-header {
+	display: none;
+}
+.all-cont {
+
+}
+h1 {
+	font-size: 2em;
+	font-weight: 700;
+	text-align: center;
+	padding: 1em;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 1.5em;
+	font-weight: 700;
+	text-align: center;
+	padding: 1em 0;
+	text-transform: uppercase;
+}
+h2 label {
+	cursor: pointer;
+}
+h2:after {
+}
+.cont {
+	width: 23.75%;
+	float: left;
+}
+.barrier {
+	float: left;
+	width: 1%;
+	height: 1em;
+}
+body {
+	height: 100%;
+}
+textarea.text-input {
+	width: 100%;
+	border: 1px solid #bfbfbf;
+	resize: none;
+	padding: 1em;
+	line-height: 1.5;
+	border-radius: .5em;
+}
+textarea.text-input:hover {
+	border-color: #7f7f7f;
+}
+textarea.text-input:focus {
+	border-color: #7f7f7f;
+	box-shadow: 0 0 .5em #7f7f7f;
+}
