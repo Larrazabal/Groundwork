@@ -1,31 +1,36 @@
-const {app, BrowserWindow} = require("electron");
+const electron = require("electron");
 const path = require("path");
 const url = require("url");
 
-/* init win */
-let win;
+const {app, BrowserWindow, Menu} = electron;
 
-function createWindow() {
+let mainWindow;
+
+/* Run createWindow when app is ready*/
+app.on("ready", function() {
 	/* Create Browser Window*/
-	win = new BrowserWindow({
+	mainWindow = new BrowserWindow({
 		width: 800,
 		height: 600
 	});
 
-	/* Load index.html */
-	win.loadURL(url.format({
-		pathname: path.join(__dirname, "index.html"),
+	/* Load mainWindow.html */
+	mainWindow.loadURL(url.format({
+		pathname: path.join(__dirname, "mainWindow.html"),
 		protocol: "file:",
 		slashes: true
 	}));
 
-	win.on("closed", () => {
+	mainWindow.on("closed", () => {
 		win = null;
 	});
-}
 
-/* Run createWindow when app is ready*/
-app.on("ready", createWindow);
+	/* Build Menu */
+	const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
+	/* Insert Menu */
+	Menu.setApplicationMenu(mainMenu);
+
+});
 
 /* Quit when all windows are closed */
 app.on("window-all-closed", () => {
@@ -33,3 +38,31 @@ app.on("window-all-closed", () => {
 		app.quit();
 	}
 });
+
+/* Create Menu Template */
+const mainMenuTemplate = [
+	{
+		label: "File",
+		submenu: [
+			{
+				label: "New",
+				accelerator: process.platform == "darwin" ? "Command+N" : "Ctrl+N"
+			},
+			{
+				label: "Open File",
+				accelerator: process.platform == "darwin" ? "Command+O" : "Ctrl+O"
+			},
+			{
+				label: "Save",
+				accelerator: process.platform == "darwin" ? "Command+S" : "Ctrl+S"
+			},
+			{
+				label: "Exit",
+				accelerator: process.platform == "darwin" ? "Command+Q" : "Ctrl+Q",
+				click() {
+					app.quit();
+				}
+			}
+		]
+	}
+];
