@@ -22,13 +22,14 @@ app.on("ready", function() {
 	}));
 
 	mainWindow.on("closed", () => {
-		win = null;
+		mainWindow = null;
 	});
 
 	/* Build Menu */
 	const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
 	/* Insert Menu */
 	Menu.setApplicationMenu(mainMenu);
+
 
 });
 
@@ -41,12 +42,15 @@ app.on("window-all-closed", () => {
 
 /* Create Menu Template */
 const mainMenuTemplate = [
-	{
+	/*{
 		label: "File",
 		submenu: [
 			{
 				label: "New",
-				accelerator: process.platform == "darwin" ? "Command+N" : "Ctrl+N"
+				accelerator: process.platform == "darwin" ? "Command+N" : "Ctrl+N",
+				click() {
+					$(".main-header").show();
+				}
 			},
 			{
 				label: "Open File",
@@ -55,6 +59,10 @@ const mainMenuTemplate = [
 			{
 				label: "Save",
 				accelerator: process.platform == "darwin" ? "Command+S" : "Ctrl+S"
+			},
+			{
+				label: "Save As",
+				accelerator: process.platform == "darwin" ? "Command+Shift+S" : "Ctrl+Shift+S"
 			},
 			{
 				type: "separator"
@@ -86,7 +94,7 @@ const mainMenuTemplate = [
 		]
 	},
 	{
-		label: "View",
+		label: "Settings",
 		submenu: [
 			{
 				label: "Toggle Tasks",
@@ -103,9 +111,15 @@ const mainMenuTemplate = [
 			{
 				label: "Toggle Done",
 				accelerator: process.platform == "darwin" ? "Command+4" : "Ctrl+4",
+			},
+			{
+				type: "separator"
+			},
+			{
+				label: "Change Project Name"
 			}
 		]
-	},
+	},*/
 	{
 		label: "Developer",
 		submenu: [

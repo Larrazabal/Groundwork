@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Project Name - Groundwork</title>
+		<title>Project Name - Groundwork - File Location</title>
 		<link rel="stylesheet" href="assets/css/reset.css">
 		<link rel="stylesheet" href="assets/css/structure.css">
 		<link rel="stylesheet" href="assets/css/theme-light.css">
@@ -11,7 +11,30 @@
 		<header class="main-header">
 			<h1>Project Name</h1>
 		</header>
-
+		<nav class="nav">
+			<ul class="ul-1">
+				<li>
+					<a href="" class="file">File</a>
+					<ul class="ul-2">
+						<li><a href="">New</a></li>
+						<li><a href="">Open</a></li>
+						<li><a href="">Save</a></li>
+						<li><a href="">Save As</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="">Settings</a>
+					<ul class="ul-2">
+						<li><a href="">Change Project Name</a></li>
+						<li><a href="">Show Tasks</a></li>
+						<li><a href="">Show To Do</a></li>
+						<li><a href="">Show Notes</a></li>
+						<li><a href="">Show Done</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="clearfix"></div>
+		</nav>
 		<div class="all-cont">
 			<div class="barrier"></div>
 			<div class="cont cont-todo-macro">
@@ -50,6 +73,10 @@
 			</div>
 			<div class="barrier"></div>
 			<div class="clearfix"></div>
+		</div>
+
+		<div class="output-container">
+			<textarea class="output" name="output" id="output"></textarea>
 		</div>
 
 		<script>window.$ = window.jQuery = require("./assets/js/jquery-3.3.1.min.js");</script>
