@@ -1,6 +1,9 @@
 
 $(document).ready(function() {
 
+	var EOn = "✅";
+	var EOff = "❌";
+
 	$(window).resize(function() {
 		resizeInputs();
 	});
@@ -10,15 +13,24 @@ $(document).ready(function() {
 	}
 	resizeInputs();
 
+	$("textarea.text-input").change(function() {
+		getOutput();
+	});
 	$("textarea.text-input").keyup(function() {
-		$(".output").val(
+		getOutput();
+	});
+
+	var output;
+	getOutput();
+	function getOutput() {
+		output = 
 			"{$::Tasks:::}" +
-				$("#input-macro").val() +
+				$("#input-plans").val() +
 			"{:::Tasks::$}" +
 
-			"{$::To Do:::}" +
+			"{$::ToDo:::}" +
 				$("#input-micro").val() +
-			"{:::To Do::$}" +
+			"{:::ToDo::$}" +
 
 			"{$::Notes:::}" +
 				$("#input-notes").val() +
@@ -26,11 +38,10 @@ $(document).ready(function() {
 
 			"{$::Done:::}" +
 				$("#input-done").val() +
-			"{:::Done::$}"
-		);
-	});
+			"{:::Done::$}";
+	}
 
 	$(".file").click(function() {
-		alert($(".output").val());
+		alert(output);
 	});
 });

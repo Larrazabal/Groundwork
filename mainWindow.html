@@ -14,43 +14,43 @@
 		<nav class="nav">
 			<ul class="ul-1">
 				<li>
-					<a href="" class="file">File</a>
+					<a href="">Settings</a>
 					<ul class="ul-2">
-						<li><a href="">New</a></li>
-						<li><a href="">Open</a></li>
-						<li><a href="">Save</a></li>
-						<li><a href="">Save As</a></li>
+						<li><a href="">🔁 Change Link</a></li>
+						<li><a href="">👀 Read File</a></li>
 					</ul>
 				</li>
 				<li>
-					<a href="">Settings</a>
+					<a href="">View</a>
 					<ul class="ul-2">
-						<li><a href="">Change Project Name</a></li>
-						<li><a href="">Show Tasks</a></li>
-						<li><a href="">Show To Do</a></li>
-						<li><a href="">Show Notes</a></li>
-						<li><a href="">Show Done</a></li>
+						<li><a href="">✅ Show Tasks <span class="shortcut">Ctrl+1</span></a></li>
+						<li><a href="">✅ Show To Do <span class="shortcut">Ctrl+2</span></a></li>
+						<li><a href="">✅ Show Notes <span class="shortcut">Ctrl+3</span></a></li>
+						<li><a href="">✅ Show Done <span class="shortcut">Ctrl+4</span></a></li>
 					</ul>
+				</li>
+				<li>
+					<a href="">Help</a>
 				</li>
 			</ul>
 			<div class="clearfix"></div>
 		</nav>
 		<div class="all-cont">
 			<div class="barrier"></div>
-			<div class="cont cont-todo-macro">
+			<div class="cont cont-plans">
 				<header class="cont-header">
-					<h2><label for="input-macro">🏃 Tasks 🙋</label></h2>
+					<h2><label for="input-plans">🏃 Plans 🙋</label></h2>
 				</header>
 				<div class="input-holder">
-					<textarea class="text-input" name="input-macro" id="input-macro"></textarea>
+					<textarea class="text-input" name="input-plans" id="input-plans"></textarea>
 				</div>
 			</div>
 			<div class="barrier"></div>
-			<div class="cont cont-todo-micro">
-					<h2><label for="input-micro">👷 To Do 💪</label></h2>
+			<div class="cont cont-todo">
+					<h2><label for="input-todo">👷 To Do 💪</label></h2>
 				</header>
 				<div class="input-holder">
-					<textarea class="text-input" name="input-macro" id="input-micro"></textarea>
+					<textarea class="text-input" name="input-todo" id="input-todo"></textarea>
 				</div>
 			</div>
 			<div class="barrier"></div>
@@ -73,10 +73,6 @@
 			</div>
 			<div class="barrier"></div>
 			<div class="clearfix"></div>
-		</div>
-
-		<div class="output-container">
-			<textarea class="output" name="output" id="output"></textarea>
 		</div>
 
 		<script>window.$ = window.jQuery = require("./assets/js/jquery-3.3.1.min.js");</script>
