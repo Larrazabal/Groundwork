@@ -9,6 +9,6 @@
   "author": "Enrique de Larrazabal",
   "license": "ISC",
   "dependencies": {
-    "electron": "^4.1.0"
+    "electron": "^15.5.5"
   }
 }
